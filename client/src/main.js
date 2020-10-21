@@ -14,7 +14,7 @@ import {
   faPlus,
   faPen,
   faTrashAlt,
-  faCaretLeft,
+  faTimes,
   faSave
 } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
@@ -23,7 +23,7 @@ library.add([
   faPlus,
   faPen,
   faTrashAlt,
-  faCaretLeft,
+  faTimes,
   faSave
 ])
 

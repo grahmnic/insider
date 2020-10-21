@@ -5,7 +5,7 @@
       </div>
       <p class="d-flex align-items-center text-uppercase font-weight-bold text-muted px-4 my-1">
           Articles
-          <font-awesome-icon class="ml-2" icon="plus" />
+          <font-awesome-icon class="ml-2" icon="plus" @click="toEditor"/>
       </p>
     <transition-group class="articles" name="list-complete">
         <div class="px-4 py-2 list-complete-item" v-for="article in filteredArticles" :key="article.id" @click="setArticle(article.id)">
@@ -36,6 +36,9 @@ export default {
     methods: {
         setArticle(id) {
             this.$store.commit('articles:setCurrent', id)
+        },
+        toEditor() {
+            this.$router.push({ name: 'Editor' })
         }
     },
 }

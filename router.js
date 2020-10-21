@@ -107,6 +107,8 @@ router.route('/articles').post(async (request, response) => {
         })
     }
 
+    request.body.payload.publication_date = new Date()
+
     let article
 
     try {

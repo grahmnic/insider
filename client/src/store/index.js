@@ -24,12 +24,16 @@ export default new Vuex.Store({
         state.articles.splice(index, 1)
       }
     },
-    'articles:updateArticle'(state, article) {
+    'articles:upsertArticle'(state, article) {
       const item = state.articles.find(item => item.id === article.id)
-      Object.assign(
-        item,
-        article
-      )
+      if (item) {
+        Object.assign(
+          item,
+          article
+        )
+      } else {
+        state.articles.push(article)
+      }
     }
   },
   getters: {

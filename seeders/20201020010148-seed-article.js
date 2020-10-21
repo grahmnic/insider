@@ -10,7 +10,7 @@ module.exports = {
       createdAt: new Date(),
       updatedAt: new Date()
     }, {
-      title: 'American Airlines plans to return the 737 Max to service in December',
+      title: 'American Airlines plans to return the 737 Max',
       author: 'Jazmin Goodwin',
       publication_date: new Date(),
       body: 'American Airlines is planning to return the Boeing 737 Max to service for passenger flights by the end of the year.\nThe return-to-service dates are "highly dependent" on recertification from the Federal Aviation Administration, the airline said on Sunday. The Max has been grounded worldwide since March 2019 following two crashes that killed 364 people.',

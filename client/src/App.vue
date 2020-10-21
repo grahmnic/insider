@@ -1,6 +1,5 @@
 <template>
   <div class="app">
-    <topbar></topbar>
     <sidebar v-if="$route.name !== 'Editor' && $route.name !== '404 Not Found'"></sidebar>
     <router-view />
   </div>
@@ -8,12 +7,10 @@
 
 <script>
 import Sidebar from '@/layout/Sidebar'
-import Topbar from '@/layout/Topbar'
 
 export default {
   components: {
     Sidebar,
-    Topbar
   },
   mounted() {
     this.getArticles()
