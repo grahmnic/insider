@@ -1,6 +1,8 @@
 module.exports = {
     devServer: {
         port: 5000,
+        disableHostCheck: true,
+        public: '0.0.0.0:5000',
         stats: {
             colors: true,
             hash: false,

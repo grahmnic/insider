@@ -53,6 +53,8 @@ export default {
     background: rgb(250, 251, 252);
     position: fixed;
     font-size: 0.825rem;
+    overflow-x: hidden;
+    overflow-y: auto;
 
     .list-complete-item {
         transition: all 0.5s;
@@ -92,11 +94,12 @@ export default {
     }
 
     .articles {
+        overflow-y: scroll;
         > * {
             width: 100%;
             white-space: nowrap;
             text-overflow: ellipsis;
-            overflow: hidden;
+            overflow-x: hidden;
             cursor: pointer;
             &:hover {
                 background: rgb(224, 226, 228);
