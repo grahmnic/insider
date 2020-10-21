@@ -10,16 +10,20 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       title: {
-        type: Sequelize.STRING(50)
+        type: Sequelize.STRING(50),
+        allowNull: false,
       },
       author: {
-        type: Sequelize.STRING(50)
+        type: Sequelize.STRING(50),
+        allowNull: false,
       },
       publication_date: {
-        type: Sequelize.DATE
+        type: Sequelize.DATE,
+        allowNull: false,
       },
       body: {
-        type: Sequelize.STRING(1000)
+        type: Sequelize.STRING(1000),
+        allowNull: false,
       },
       createdAt: {
         allowNull: false,

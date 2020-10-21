@@ -6,9 +6,11 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "migrate": "./node_modules/.bin/sequelize db:migrate",
+    "unmigrate": "./node_modules/.bin/sequelize db:migrate:undo:all",
     "seed": "./node_modules/.bin/sequelize db:seed:all",
     "unseed": "./node_modules/.bin/sequelize db:seed:undo:all",
-    "start": "npm run migrate && npm run unseed && npm run seed && nodemon main.js"
+    "both": "concurrently -r \"nodemon main.js\" \"npm run serve --prefix client\"",
+    "start": "npm run unmigrate && npm run migrate && npm run unseed && npm run seed && npm run both"
   },
   "author": "",
   "license": "ISC",
