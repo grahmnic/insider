@@ -11,6 +11,7 @@
     "unseed": "./node_modules/.bin/sequelize db:seed:undo:all",
     "both": "concurrently -r \"nodemon main.js\" \"npm run serve --prefix client\"",
     "build": "npm run build --prefix client",
+    "postinstall": "cd client && npm install",
     "start": "npm run unmigrate && npm run migrate && npm run unseed && npm run seed && npm run both"
   },
   "author": "",
