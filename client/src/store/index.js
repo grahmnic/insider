@@ -18,7 +18,6 @@ export default new Vuex.Store({
     },
     'articles:deleteCurrent'(state, id) {
       const index = state.articles.findIndex(item => item.id === id)
-      console.log(index)
       Vue.set(state, 'current_article', null)
       if (index >= 0) {
         state.articles.splice(index, 1)

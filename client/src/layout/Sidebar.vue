@@ -7,8 +7,8 @@
           Articles
           <font-awesome-icon class="ml-2" icon="plus" @click="toEditor"/>
       </p>
-    <transition-group class="articles" name="list-complete">
-        <div class="px-4 py-2 list-complete-item" v-for="article in filteredArticles" :key="article.id" @click="setArticle(article.id)">
+    <transition-group class="articles" name="list-complete" tag="div">
+        <div class="px-4 py-2 list-complete-item m-0" :class="{ 'active': current_article && article.id === current_article.id }" v-for="article in filteredArticles" :key="article.id" @click="setArticle(article.id)">
             {{article.title}}
         </div>
     </transition-group>
@@ -22,7 +22,8 @@ export default {
     name: 'sidebar',
     computed: {
         ...mapGetters([
-            'articles'
+            'articles',
+            'current_article'
         ]),
         filteredArticles() {
             return this.articles.filter(article => new RegExp(this.input.trim(), 'gi').test(article.title))
@@ -94,7 +95,6 @@ export default {
     }
 
     .articles {
-        overflow-y: scroll;
         > * {
             width: 100%;
             white-space: nowrap;
@@ -104,6 +104,11 @@ export default {
             &:hover {
                 background: rgb(224, 226, 228);
             }
+        }
+
+        .active {
+            border-right: 4px solid orange;
+            background: rgba(224, 226, 228, 0.5);
         }
     }
 }

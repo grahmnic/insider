@@ -21,7 +21,7 @@ export default {
         .then((response) => {
           this.$store.commit('articles:set', response.data.payload)
           if (response.data.payload.length) {
-            this.$store.commit('articles:setCurrent', response.data.payload[0])
+            this.$store.commit('articles:setCurrent', response.data.payload[0].id)
           }
         }).catch((err) => {
           console.error(`[App] Error fetching articles: ${err}`)

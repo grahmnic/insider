@@ -10,6 +10,7 @@
     "seed": "./node_modules/.bin/sequelize db:seed:all",
     "unseed": "./node_modules/.bin/sequelize db:seed:undo:all",
     "both": "concurrently -r \"nodemon main.js\" \"npm run serve --prefix client\"",
+    "postinstall": "npm run build --prefix client",
     "start": "npm run unmigrate && npm run migrate && npm run unseed && npm run seed && npm run both"
   },
   "author": "",
