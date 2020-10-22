@@ -9,4 +9,4 @@ npm install
 npm start
 
 
-The MEVN app can be accessed on either port 5000 or 3000.
+The app can be accessed on either port 5000 or 3000.
