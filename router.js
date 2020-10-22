@@ -1,13 +1,14 @@
 const db = require('./models');
 const express = require('express');
 const router = express.Router();
+const path = require('path')
 
 // Sequelize
 const Sequelize = require('sequelize');
 const Op = Sequelize.Op;
 
 // Fallback
-router.route('/').get((req, res) => res.sendStatus(200))
+router.route('/').get((req, res) => res.sendFile(path.join(__dirname, '/client/dist/index.html')))
 
 // Articles
 router.route('/articles').get(async (request, response) => {
