@@ -1,11 +1,6 @@
+Run the following:
 npm install
+npm install --prefix client
 npm start
 
-Dependencies:
-sequelize-cli
-vue-cli
-express
-sqlite3
-lodash
-pluralize
-concurrently
+The MEVN app can be accessed on port 5000 and 3000.
