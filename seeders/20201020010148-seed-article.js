@@ -3,7 +3,7 @@
 module.exports = {
   up: async (queryInterface, Sequelize) => {
     return queryInterface.bulkInsert('Articles', [{
-      title: 'CVS is filling thousands of pharmacy jobs to battle coronavirus',
+      title: 'CVS is filling thousands of pharmacy jobs',
       author: 'Jordan Valinsky',
       publication_date: new Date(),
       body: 'CVS Health is hiring 15,000 more employees in addition to the 50,000 previously hired as it braces for an onslaught of more Covid-19 and flu cases.\nThe chain said Monday that more than 10,000 of the positions will be a mix of full-time and part-time positions for licensed pharmacy technicians. In addition to their normal duties, CVS (CVS) said that they can "help fill the urgent need to safely and quickly scale distribution" of a Covid-19 vaccine once it becomes available.',
